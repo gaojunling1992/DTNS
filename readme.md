@@ -1,9 +1,12 @@
 A new drug repositioning method (DTNS) for cancer
+=========================================================================================
 
 Introduction
+-----------------------------------------------------------------------------------
 Computation-based drug repositioning has addressed increasing attention since it can accelerate the traditional drug discovery process significantly. We proposed a new drug-repositioning method based on the drug targets network similarity (DTNS), aiming to provide potential opportunities for cancer therapy. This pipeline could help to understand the molecular mechanism of cancer and provide novel opportunities for cancer therapy. We hope this method could promote drug repositioning for other diseases.
 
 Source
+-------------
 https://github.com/gaojunling1992/DTNS
 
 Contact
@@ -15,8 +18,8 @@ awk, R (>= 3.3.2), perl5.10.1, python2.7
 Preparation
 We downloaded the DrugBank (version 5.0.8) XML file which was released on September 20th, 2017 and used an in-house python script to extract the targets and other drug property information for each drug. Gene-gene interactions were obtained from the STRING database which provided a critical assessment and integration of protein-protein interactions. We extracted all the protein direct interactions that were experimentally supported. In order to further explore the relationship between the DTN of cancer drugs and cancer genomics, we collected mutations data in pan-cancer patients from the NCI Genomic Data Commons (GDC) which is an information system for exploiting multidimensional cancer genomics data.
 
-python xml_script/*.py
-bash run_string.sh
+>python xml_script/*.py
+>bash run_string.sh
 
 
 cancer_drugs_analysis
