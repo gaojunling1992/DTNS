@@ -22,6 +22,7 @@ Preparation
 We downloaded the DrugBank (version 5.0.8) XML file which was released on September 20th, 2017 and used an in-house python script to extract the targets and other drug property information for each drug. Gene-gene interactions were obtained from the STRING database which provided a critical assessment and integration of protein-protein interactions. We extracted all the protein direct interactions that were experimentally supported. In order to further explore the relationship between the DTN of cancer drugs and cancer genomics, we collected mutations data in pan-cancer patients from the NCI Genomic Data Commons (GDC) which is an information system for exploiting multidimensional cancer genomics data.
 
 >python xml_script/*.py
+
 >bash run_string.sh
 
 
