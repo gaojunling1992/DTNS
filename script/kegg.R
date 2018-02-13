@@ -1,0 +1,13 @@
+library(org.Hs.eg.db)
+library(clusterProfiler)
+
+argv <- commandArgs(TRUE)
+data <- read.table(argv[1],header=F)
+data2 = bitr(data[,1], fromType="UNIPROT", toType="ENTREZID", annoDb="org.Hs.eg.db")
+kk <- enrichKEGG(data2$"ENTREZID",organism='human',pvalueCutoff=0.99,qvalueCutoff = 0.99,pAdjustMethod = "BH",readable=T)
+file2 = paste(argv[1],".tab",sep='')
+write.table(summary(kk),file=file2,quote=F,sep="\t",row.names=F)
+file3 = paste(argv[1],".pdf",sep='')
+pdf(file3)
+dotplot(kk,showCategory=10,title="KEGG")
+dev.off()
