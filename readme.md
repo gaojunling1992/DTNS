@@ -42,9 +42,13 @@ The DTNS pipeline
 Jaccard Index
 --------------------------------------------------------------------------------------------
 >perl dataframe.pl
+
 >perl GetSimilarValue.pl
+
 >perl get_atc_first_sub.pl
+
 >Rscript reshape.R
+
 >Rscript pheatmap.R
 
 
