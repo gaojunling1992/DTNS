@@ -27,16 +27,23 @@ We downloaded the DrugBank (version 5.0.8) XML file which was released on Septem
 
 
 >cancer_drugs_analysis
+
 >bash get_cancer_drugs.sh
+
 >cat cancer_drug.list|xargs -n 1 Rscript kegg.R
+
 >perl every_drug.pl
+
 >perl get_cancer.pl
+
 >perl CancerDrugKeggEnrich.pl
+
 >perl get_top_id_qvalue.pl
 
 The DTNS pipeline
 --------------------------------------------------------------------------------------------
 >perl pre_score1.pl 9606.protein.actions.v10.5.experiments_uniprot_unfold_cut2_uniq_fold.txt SetA_cancer_freq.tab SetB_cancer_freq.tab
+
 >Rscrpt calculate_score.R
 
 Jaccard Index
